@@ -3,7 +3,8 @@ pragma solidity >=0.7.0 <0.9.0;
 
 /*
 In Solidity, variables are used to store data that can be referenced and modified by the contract. 
-Understanding variables is fundamental to writing smart contracts because they determine how data is stored, accessed, and manipulated.
+Understanding variables is fundamental to writing smart contracts because they determine how data is stored, 
+accessed, and manipulated.
 
 Types of Variables in Solidity:
 1. State Variables: Variables that are stored on the blockchain.
@@ -13,7 +14,9 @@ Types of Variables in Solidity:
 Let’s break each one down:
 
 1. State Variables
-State variables are declared at the contract level and are permanently stored in the blockchain. These variables are the data that the contract keeps track of, such as balances, contract ownership, and any other information that needs to persist across function calls.
+State variables are declared at the contract level and are permanently stored in the blockchain. 
+These variables are the data that the contract keeps track of, such as balances, contract ownership,
+and any other information that needs to persist across function calls.
 
 Characteristics of State Variables:
 - They are stored on the blockchain, meaning they incur gas costs when written to or modified.
@@ -35,7 +38,9 @@ contract StateVariablesExample {
 Here, totalSupply is a state variable. Its value is stored on the blockchain and persists between function calls.
 
 2. Local Variables
-Local variables are declared inside functions and are not stored on the blockchain. They exist only while the function is executing and are discarded once the function execution is complete. Local variables are cheaper to use because they don't involve storing data on the blockchain.
+Local variables are declared inside functions and are not stored on the blockchain. They exist only while 
+the function is executing and are discarded once the function execution is complete. Local variables are 
+cheaper to use because they don't involve storing data on the blockchain.
 
 Characteristics of Local Variables:
 - They only exist during the function execution.
@@ -54,10 +59,13 @@ contract LocalVariablesExample {
     }
 }
 
-In this example, the variable sum is a local variable. It’s created when the calculateSum function is called and destroyed after the function completes.
+In this example, the variable sum is a local variable. It’s created when the 
+calculateSum function is called and destroyed after the function completes.
 
 3. Global Variables
-Solidity provides global variables that give information about the blockchain environment, such as block details, transaction information, and contract details. These are read-only and don't need to be declared.
+Solidity provides global variables that give information about the blockchain environment, 
+such as block details, transaction information, and contract details. These are read-only
+and don't need to be declared.
 
 Key Global Variables:
 - msg.sender: The address of the account that called the contract function (i.e., the transaction sender).
@@ -93,11 +101,14 @@ In this example:
 - block.number gives the current block number.
 
 4. Visibility of Variables
-The visibility of a variable determines where and how it can be accessed in the contract. Solidity provides four types of visibility:
+The visibility of a variable determines where and how it can be accessed in the contract.
+Solidity provides four types of visibility:
+
 - public: The variable is visible inside and outside the contract.
 - internal: The variable is visible inside the contract and derived contracts, but not externally.
 - private: The variable is visible only inside the contract it’s declared in.
-- external: Typically used for functions, not variables. It indicates the variable can only be accessed from outside the contract.
+- external: Typically used for functions, not variables. It indicates the variable can 
+    only be accessed from outside the contract.
 
 Example of Visibility:
 
